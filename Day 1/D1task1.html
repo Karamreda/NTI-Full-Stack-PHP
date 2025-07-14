@@ -65,20 +65,17 @@
   form.addEventListener("submit", function (e) {
     e.preventDefault();
 
-    // Get input values
     const name = document.getElementById("fullName").value;
     const email = document.getElementById("email").value;
     const age = document.getElementById("age").value;
     const city = document.getElementById("city").value;
 
-    // Set values to profile card
     document.getElementById("welcomeText").textContent = `Welcome, ${name}!`;
     document.getElementById("profileName").textContent = name;
     document.getElementById("profileEmail").textContent = email;
     document.getElementById("profileAge").textContent = age;
     document.getElementById("profileCity").textContent = city;
 
-    // Toggle views
     formCard.classList.add("d-none");
     profileCard.classList.remove("d-none");
   });
