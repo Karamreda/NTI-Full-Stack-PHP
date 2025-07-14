@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Styled Form and Lists</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+            color: #333;
+        }
+
+        /* Form styles */
+        .log-form {
+            max-width: 600px;
+            margin: 0 auto 30px;
+            padding: 20px;
+            background-color: #f9f9f9;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .form-input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            box-sizing: border-box;
+            font-size: 16px;
+        }
+
+        .form-input:focus {
+            border-color: #4CAF50;
+            outline: none;
+            box-shadow: 0 0 5px rgba(76, 175, 80, 0.5);
+        }
+
+        button.form-input {
+            background-color: #4CAF50;
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            border: none;
+            padding: 12px;
+        }
+
+        button.form-input:hover {
+            background-color: #45a049;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        /* List styles */
+        h3 {
+            color: #2c3e50;
+            border-bottom: 2px solid #4CAF50;
+            padding-bottom: 5px;
+            margin-top: 30px;
+        }
+
+        .first-ol {
+            list-style-type: decimal;
+            padding-left: 20px;
+            color: #2c3e50;
+        }
+
+        .second-ol {
+            list-style-type: upper-roman;
+            padding-left: 20px;
+            color: #2c3e50;
+        }
+
+        .first-ul {
+            list-style-type: disc;
+            padding-left: 20px;
+            color: #2c3e50;
+        }
+
+        .second-ul {
+            list-style-type: square;
+            padding-left: 20px;
+            color: #2c3e50;
+        }
+
+        /* Table styles */
+        .log-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+
+        .log-table th, .log-table td {
+            padding: 12px;
+            text-align: left;
+            border: 1px solid #ddd;
+        }
+
+        .log-table th {
+            background-color: #4CAF50;
+            color: white;
+            text-transform: capitalize;
+        }
+
+        .log-table tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        .log-table tr:hover {
+            background-color: #e9e9e9;
+        }
+
+        .log-table td:first-child {
+            font-weight: bold;
+            color: #2c3e50;
+        }
+
+        .log-table td:nth-child(2) {
+            text-transform: capitalize;
+        }
+    </style>
+</head>
+<body>
+    <form action="submit.php" method="post" class="log-form">
+        <label for="name">Full Name:</label>
+        <input type="text" id="name" name="fullname" class="form-input" placeholder="Enter Your Name"/>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" class="form-input" placeholder="Enter Your Email"/>
+
+        <label for="gender">Gender:</label>
+        <select id="gender" name="gender" class="form-input">
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+        </select>
+
+        <label for="message">Message:</label>
+        <textarea   class="form-input"
+                    id="message" 
+                    name="message" 
+                    rows="4" 
+                    cols="30"></textarea>
+
+        <button type="submit" class="form-input">send data</button>
+    </form>
+
+    <h3>Frontend Technologies to Learn:</h3>
+    <ol class="first-ol">
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JavaScript</li>
+    </ol>
+
+    <ol class="second-ol">
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JavaScript</li>
+    </ol>
+
+    <h3>Shopping List:</h3>
+    <ul class="first-ul">
+        <li>Milk</li>
+        <li>Bread</li>
+        <li>Eggs</li>
+    </ul>
+
+    <ul class="second-ul">
+        <li>Milk</li>
+        <li>Bread</li>
+        <li>Eggs</li>
+    </ul>
+
+    <table class="log-table" border="1">
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Name</th>
+                <th>Subject</th>
+                <th>Grade</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>Karam</td>
+                <td>Math</td>
+                <td>95</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Habiba</td>
+                <td>Science</td>
+                <td>88</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Zinab</td>
+                <td>geography</td>
+                <td>75</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>
