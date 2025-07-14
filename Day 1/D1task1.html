@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bootstrap Login Form</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <style>
+    body {
+      background: linear-gradient(to right, #a8e063, #56ab2f);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .card {
+      width: 100%;
+      max-width: 400px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    }
+  </style>
+</head>
+<body>
+
+<div class="card p-4" id="form-card">
+  <h4 class="text-center mb-4">User Information</h4>
+  <form id="userForm">
+    <div class="mb-3">
+      <label class="form-label">Full Name</label>
+      <input type="text" class="form-control" id="fullName" required>
+    </div>
+    <div class="mb-3">
+      <label class="form-label">Email</label>
+      <input type="email" class="form-control" id="email" required>
+    </div>
+    <div class="mb-3">
+      <label class="form-label">Age</label>
+      <input type="number" class="form-control" id="age" min="1" required>
+    </div>
+    <div class="mb-3">
+      <label class="form-label">City</label>
+      <input type="text" class="form-control" id="city" required>
+    </div>
+    <button type="submit" class="btn btn-success w-100">Submit</button>
+  </form>
+</div>
+
+<div class="card p-4 d-none" id="profile-card">
+  <h4 class="text-center mb-3">User Profile</h4>
+  <div class="alert alert-success text-center" id="welcomeText"></div>
+  <div>
+    <p><strong>Full Name:</strong> <span id="profileName"></span></p>
+    <p><strong>Email:</strong> <span id="profileEmail"></span></p>
+    <p><strong>Age:</strong> <span id="profileAge"></span></p>
+    <p><strong>City:</strong> <span id="profileCity"></span></p>
+  </div>
+  <button class="btn btn-primary mt-3" onclick="goBack()">Back to Form</button>
+</div>
+
+<script>
+  const form = document.getElementById("userForm");
+  const formCard = document.getElementById("form-card");
+  const profileCard = document.getElementById("profile-card");
+
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    // Get input values
+    const name = document.getElementById("fullName").value;
+    const email = document.getElementById("email").value;
+    const age = document.getElementById("age").value;
+    const city = document.getElementById("city").value;
+
+    // Set values to profile card
+    document.getElementById("welcomeText").textContent = `Welcome, ${name}!`;
+    document.getElementById("profileName").textContent = name;
+    document.getElementById("profileEmail").textContent = email;
+    document.getElementById("profileAge").textContent = age;
+    document.getElementById("profileCity").textContent = city;
+
+    // Toggle views
+    formCard.classList.add("d-none");
+    profileCard.classList.remove("d-none");
+  });
+
+  function goBack() {
+    profileCard.classList.add("d-none");
+    formCard.classList.remove("d-none");
+  }
+</script>
+
+</body>
+</html>
