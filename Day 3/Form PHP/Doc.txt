@@ -1,0 +1,44 @@
+# Student Registration Web App
+
+A simple web application built with **HTML**, **Bootstrap 5**, and **PHP** that allows users to register student information and view a list of registered students with automatic evaluation based on their grades.
+
+##  Features
+
+- Clean and modern responsive design using Bootstrap 5.
+- Student registration form with client-side validation.
+- Modal window displaying a table of registered students.
+- Dynamic evaluation based on student grade (Excellent, Very Good, etc.).
+- Built using PHP to render the student list dynamically.
+
+## Fields in the Registration Form
+
+- Full Name
+- Email Address
+- Age
+- Gender
+- Grade (0–100)
+- Notes
+
+## Evaluation Criteria
+
+- **90+** → Excellent  
+- **80–89** → Very Good  
+- **70–79** → Good  
+- **60–69** → Pass  
+- **< 60** → Weak
+
+## How to Use
+
+1. Open the `index.html` (with PHP support) in a local server like XAMPP, WAMP, or Live Server with PHP.
+2. Fill out the form and click "Submit".
+3. Click "View Students" to display the table of current students and their evaluation.
+
+## Technologies Used
+
+- HTML5
+- Bootstrap 5
+- PHP 8+
+
+## 🧑 Author
+
+Created by **Karam Reda** – for educational purposes.
